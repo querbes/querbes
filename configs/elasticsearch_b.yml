@@ -1,9 +1,9 @@
 cluster.name: es-dev
-node.name: "PR01_Querbes_b"
+node.name: "{HOSTNAME}_{SITENAME}_a"
 node.master: false
 node.data: true
-node.site: "Querbes"
-node.machine: "PR01"
+node.site: "{SITENAME}"
+node.machine: "{HOSTNAME}"
 cluster.routing.allocation.awareness.attributes: site,machine
 transport.tcp.port: 9301
 http.port: 9201

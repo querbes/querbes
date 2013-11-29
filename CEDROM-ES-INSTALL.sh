@@ -17,9 +17,11 @@ MEMSIZE_B='256m'
 MEMSIZE_M='256m'
 
 #Adresse IP de la machine courante
-HOST = `hostname`
-IPCONF = `ifconfig eth0 | awk '/inet addr/ {split ($2,A,":"); print A[2]}'`
+HOST=`hostname`
+IPCONF=`ifconfig eth0 | awk '/inet addr/ {split ($2,A,":"); print A[2]}'`
 sed -i 's/{IP_ADDRESS}/'$IPCONF'/g' configs/elasticsearch_*.yml
+sed -i 's/{HOSTNAME}/'$HOST'/g' configs/elasticsearch_*.yml
+sed -i 's/{SITENAME}/'$SITE'/g' configs/elasticsearch_*.yml
 
 #Memoire souhaitée pour les noeuds a,b et m
 sed -i 's/{CEDROM-HEAP_SIZE}/'$MEMSIZE_A'/g' scripts/default/elasticsearch_a
