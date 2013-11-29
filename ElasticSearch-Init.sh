@@ -1,20 +1,20 @@
 #!/bin/bash
 
-#Menage
+
+################ Constantes ##################
+SITE='Querbes'
+MEMSIZE_A='512m'
+MEMSIZE_B='512m'
+MEMSIZE_M='256m'
+################ Constantes ##################
+
+#Cleanup
 userdel elasticsearch
 groupdel elasticsearch
-
 rm -r /etc/elasticsearch*
 rm -r /usr/share/elasticsearch*
 rm /etc/init.d/elasticsearch*
 rm /etc/default/elasticsearch*
-
-
-#constantes
-SITE='Querbes'
-MEMSIZE_A='256m'
-MEMSIZE_B='256m'
-MEMSIZE_M='256m'
 
 #Adresse IP de la machine courante
 HOST=`hostname`

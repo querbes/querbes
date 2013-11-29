@@ -1,5 +1,5 @@
 cluster.name: es-dev
-node.name: "{HOSTNAME}_{SITENAME}_a"
+node.name: "{HOSTNAME}_{SITENAME}_A"
 node.master: false
 node.data: true
 node.site: "{SITENAME}"
@@ -8,7 +8,7 @@ cluster.routing.allocation.awareness.attributes: site,machine
 transport.tcp.port: 9300
 http.port: 9200
 discovery.zen.ping.multicast.enabled: false
-discovery.zen.ping.unicast.hosts: ["{IP_ADDRESS}"]
+discovery.zen.ping.unicast.hosts: ["{IP_ADDRESS}:9302"]
 
 ##################### ElasticSearch Configuration Example #####################
 
