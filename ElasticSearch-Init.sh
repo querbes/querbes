@@ -27,7 +27,6 @@ then
 else
 	MEMSIZE_M='256m'
 fi
-################ Constantes ##################
 
 #Cleanup
 userdel elasticsearch
