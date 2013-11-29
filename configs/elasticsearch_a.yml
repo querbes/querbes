@@ -5,10 +5,10 @@ node.data: true
 node.site: "Querbes"
 node.machine: "PR01"
 cluster.routing.allocation.awareness.attributes: site,machine
-transport.ticp.port: 9300
+transport.tcp.port: 9300
 http.port: 9200
-#discovery.zen.ping.multicast.enabled: false
-#discovery.zen.ping.unicast.hosts: ["192.168.1.120"]
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: ["{IP_ADDRESS}"]
 
 ##################### ElasticSearch Configuration Example #####################
 

@@ -5,10 +5,10 @@ node.data: false
 node.site: "Querbes"
 node.machine: "PR01"
 cluster.routing.allocation.awareness.attributes: site,machine
-transport.ticp.port: 9302
+transport.tcp.port: 9302
 http.port: 9202
-#discovery.zen.ping.multicast.enabled: false
-#discovery.zen.ping.unicast.hosts: ["192.168.1.120"]
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: ["{IP_ADDRESS}"]
 
 ##################### ElasticSearch Configuration Example #####################
 
@@ -92,7 +92,7 @@ http.port: 9202
 # for customized shard allocation filtering, or allocation awareness. An attribute
 # is a simple key value pair, similar to node.key: value, here is an example:
 #
-node.machine: mba
+#node.machine: mba
 
 # By default, multiple nodes are allowed to start from the same installation location
 # to disable it, set the following:

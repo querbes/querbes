@@ -1,5 +1,21 @@
 #!/bin/bash
 
+#constantes
+SITE='Querbes'
+MEMSIZE_A='256m'
+MEMSIZE_B='256m'
+MEMSIZE_M='256m'
+
+#Adresse IP de la machine courante
+HOST = `hostname`
+IPCONF = `ifconfig eth0 | awk '/inet addr/ {split ($2,A,":"); print A[2]}'`
+sed -i 's/{IP_ADDRESS}/'$IPCONF'/g' configs/elasticsearch_*.yml
+
+#Memoire souhaitée pour les noeuds a,b et m
+sed -i 's/{CEDROM-HEAP_SIZE}/'$MEMSIZE_A'/g' scripts/default/elasticsearch_a
+sed -i 's/{CEDROM-HEAP_SIZE}/'$MEMSIZE_B'/g' scripts/default/elasticsearch_b
+sed -i 's/{CEDROM-HEAP_SIZE}/'$MEMSIZE_M'/g' scripts/default/elasticsearch_m
+
 #Creation des utilisateurs
 groupadd elasticsearch
 useradd -g elasticsearch elasticsearch
