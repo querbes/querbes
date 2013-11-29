@@ -15,12 +15,12 @@ then
 else
 	MEMSIZE_A=$1
 fi
-then
+if [ -n "$2" ]
 	MEMSIZE_B='512m'
 else
 	MEMSIZE_B=$2
 fi
-then
+if [ -n "$3" ]
 	MEMSIZE_M='256m'
 else
 	MEMSIZE_M=$3
