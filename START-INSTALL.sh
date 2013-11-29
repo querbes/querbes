@@ -1,6 +1,7 @@
 #!/bin/bash
-
-echo "DEBUT DE L'INSTALLATION"
+echo "###########################"
+echo "# DEBUT DE L'INSTALLATION #"
+echo "###########################"
 
 mkdir /cedromsni
 cd /cedromsni
@@ -14,11 +15,10 @@ chmod +x Server-Init.sh
 chmod +x ElasticSearch-Init.sh
 ./Server-Init.sh
 
-###############################################################################
-#################   CHANGER LES PARAMETRES ICI !!!    #########################
-###############################################################################
 # ElasticSearch-Init.sh SiteName HeapSizeNode_A HeapSizeNode_B HeapSizeNode_M #
 ./ElasticSearch-Init.sh $1 $2 $3 $4
 ###############################################################################
 
-echo "INSTALLATION TERMINEE !"
+echo "###########################"
+echo "# INSTALLATION TERMINEE ! #"
+echo "###########################"
