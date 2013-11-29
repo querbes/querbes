@@ -18,7 +18,7 @@ chmod +x ElasticSearch-Init.sh
 #################   CHANGER LES PARAMETRES ICI !!!    #########################
 ###############################################################################
 # ElasticSearch-Init.sh SiteName HeapSizeNode_A HeapSizeNode_B HeapSizeNode_M #
-./ElasticSearch-Init.sh 'Querbes' '500m' '400m' '128m'
+./ElasticSearch-Init.sh $1 $2 $3 $4
 ###############################################################################
 
 echo "INSTALLATION TERMINEE !"
