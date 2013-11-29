@@ -1,11 +1,30 @@
 #!/bin/bash
 
 
-################ Constantes ##################
-SITE='Querbes'
-MEMSIZE_A='512m'
-MEMSIZE_B='512m'
-MEMSIZE_M='256m'
+################ Parameters ##################
+if [ -n "$0" ]
+then
+	SITE='Dev'
+else
+	SITE=$0
+fi
+
+if [ -n "$1" ]
+then
+	MEMSIZE_A='512m'
+else
+	MEMSIZE_A=$1
+fi
+then
+	MEMSIZE_B='512m'
+else
+	MEMSIZE_B=$2
+fi
+then
+	MEMSIZE_M='256m'
+else
+	MEMSIZE_M=$3
+fi
 ################ Constantes ##################
 
 #Cleanup

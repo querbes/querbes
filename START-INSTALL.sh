@@ -10,7 +10,11 @@ tar -zxvf master.tar.gz
 mv querbes-master/ install/
 cd install
 
-./Server-Init.sh  
-./ElasticSearch-Init.sh  
+chmod +x Server-Init.sh
+chmod +x ElasticSearch-Init.sh
+./Server-Init.sh
+#ElasticSearch-Init.sh SiteName HeapSizeNode_A HeapSizeNode_B HeapSizeNode_M
+./ElasticSearch-Init.sh 'Querbes' '500m' '400m' '128m'
+
 
 echo "INSTALLATION TERMINEE !"
