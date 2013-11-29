@@ -4,8 +4,8 @@
 userdel elasticsearch
 groupdel elasticsearch
 
-rmdir -R /etc/elasticsearch*
-rmdir -R /usr/share/elasticsearch*
+rm -r /etc/elasticsearch*
+rm -r /usr/share/elasticsearch*
 rm /etc/init.d/elasticsearch*
 rm /etc/default/elasticsearch*
 
