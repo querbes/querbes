@@ -2,30 +2,30 @@
 
 
 ################ Parameters ##################
-if [ -n $0 ]
-then
-	SITE='Dev'
-else
-	SITE=$0
-fi
-
 if [ -n $1 ]
 then
-	MEMSIZE_A='512m'
+	SITE=$1
 else
-	MEMSIZE_A=$1
+	SITE='Dev'
 fi
+
 if [ -n $2 ]
 then
-	MEMSIZE_B='512m'
+	MEMSIZE_A=$2
 else
-	MEMSIZE_B=$2
+	MEMSIZE_A='512m'
 fi
 if [ -n $3 ]
 then
-	MEMSIZE_M='256m'
+	MEMSIZE_B=$3
 else
-	MEMSIZE_M=$3
+	MEMSIZE_B='512m'
+fi
+if [ -n $4 ]
+then
+	MEMSIZE_M=$4
+else
+	MEMSIZE_M='256m'
 fi
 ################ Constantes ##################
 

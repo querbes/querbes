@@ -13,8 +13,12 @@ cd install
 chmod +x Server-Init.sh
 chmod +x ElasticSearch-Init.sh
 ./Server-Init.sh
-#ElasticSearch-Init.sh SiteName HeapSizeNode_A HeapSizeNode_B HeapSizeNode_M
-./ElasticSearch-Init.sh 'Querbes' '500m' '400m' '128m'
 
+###############################################################################
+#################   CHANGER LES PARAMETRES ICI !!!    #########################
+###############################################################################
+# ElasticSearch-Init.sh SiteName HeapSizeNode_A HeapSizeNode_B HeapSizeNode_M #
+./ElasticSearch-Init.sh 'Querbes' '500m' '400m' '128m'
+###############################################################################
 
 echo "INSTALLATION TERMINEE !"
