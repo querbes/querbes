@@ -63,14 +63,8 @@ cp configs/logging_m.yml /etc/elasticsearch_m/logging.yml
 /etc/init.d/elasticsearch_b start
 /etc/init.d/elasticsearch_m start
 
-#installation des plugins 
-/usr/share/elasticsearch_a/bin/plugin -install mobz/elasticsearch-head
-/usr/share/elasticsearch_b/bin/plugin -install mobz/elasticsearch-head
+#installation des plugins sur le noeud master
 /usr/share/elasticsearch_m/bin/plugin -install mobz/elasticsearch-head
-/usr/share/elasticsearch_a/bin/plugin -install lukas-vlcek/bigdesk
-/usr/share/elasticsearch_b/bin/plugin -install lukas-vlcek/bigdesk
 /usr/share/elasticsearch_m/bin/plugin -install lukas-vlcek/bigdesk
-/usr/share/elasticsearch_a/bin/plugin -install lmenezes/elasticsearch-kopf
-/usr/share/elasticsearch_b/bin/plugin -install lmenezes/elasticsearch-kopf
 /usr/share/elasticsearch_m/bin/plugin -install lmenezes/elasticsearch-kopf
 
