@@ -2,25 +2,27 @@
 
 
 ################ Parameters ##################
-if [ -n "$0" ]
+if [ -n $0 ]
 then
 	SITE='Dev'
 else
 	SITE=$0
 fi
 
-if [ -n "$1" ]
+if [ -n $1 ]
 then
 	MEMSIZE_A='512m'
 else
 	MEMSIZE_A=$1
 fi
-if [ -n "$2" ]
+if [ -n $2 ]
+then
 	MEMSIZE_B='512m'
 else
 	MEMSIZE_B=$2
 fi
-if [ -n "$3" ]
+if [ -n $3 ]
+then
 	MEMSIZE_M='256m'
 else
 	MEMSIZE_M=$3
