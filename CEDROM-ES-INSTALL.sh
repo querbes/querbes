@@ -1,5 +1,15 @@
 #!/bin/bash
 
+#Menage
+userdel elasticsearch
+groupdel elasticsearch
+
+rmdir -R /etc/elasticsearch*
+rmdir -R /usr/share/elasticsearch*
+rm /etc/init.d/elasticsearch*
+rm /etc/default/elasticsearch*
+
+
 #constantes
 SITE='Querbes'
 MEMSIZE_A='256m'
