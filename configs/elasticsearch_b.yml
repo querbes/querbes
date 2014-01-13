@@ -5,10 +5,10 @@ node.data: true
 node.site: "{SITENAME}"
 node.machine: "{HOSTNAME}"
 cluster.routing.allocation.awareness.attributes: site,machine
-transport.tcp.port: 9301
-http.port: 9201
+transport.tcp.port: 9302
+http.port: 9202
 discovery.zen.ping.multicast.enabled: false
-discovery.zen.ping.unicast.hosts: ["{IP_ADDRESS}:9302"]
+discovery.zen.ping.unicast.hosts: ["{IP_ADDRESS}:9300"]
 
 ##################### ElasticSearch Configuration Example #####################
 
