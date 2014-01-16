@@ -48,7 +48,7 @@ sed -i 's/{CEDROM-HEAP_SIZE}/'$MEMSIZE_A'/g' scripts/default/elasticsearch_a
 sed -i 's/{CEDROM-HEAP_SIZE}/'$MEMSIZE_B'/g' scripts/default/elasticsearch_b
 sed -i 's/{CEDROM-HEAP_SIZE}/'$MEMSIZE_M'/g' scripts/default/elasticsearch_m
 
-#Creation des utilisateurs
+#Creation des groupes/utilisateurs
 groupadd elasticsearch
 useradd -g elasticsearch elasticsearch
 
@@ -61,7 +61,7 @@ mkdir /usr/share/elasticsearch_b
 mkdir /usr/share/elasticsearch_m
 
 #Copie du code source d'ElasticSearch
-tar -zxvf source/elasticsearch-0.90.7.tar.gz
+tar -zxvf source/elasticsearch-0.90.10.tar.gz
 cp -R elasticsearch-0.90.7/* /usr/share/elasticsearch_a/
 cp -R elasticsearch-0.90.7/* /usr/share/elasticsearch_b/
 cp -R elasticsearch-0.90.7/* /usr/share/elasticsearch_m/
