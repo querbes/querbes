@@ -8,24 +8,13 @@ else
 	PASSWORD='cedromsni'
 fi
 
-###################
-#  Config Nginx  ##
-###################
 
-# 1/ creer le mot de passe
-htpasswd -cb /etc/nginx/htpasswd_file elasticsearch_admin $PASSWORD
-chown root:nobody /etc/nginx/htpasswd_file
-chmod 640 /etc/nginx/htpasswd_file
-
-# 2/ Copier le fichier nginx.conf
-cp configs/nginx.conf /etc/nginx/nginx.conf
-
-
-
-
-###################
-# Config IPTables #
-###################
+#################################################################
+# Config IPTables                                               #
+#---------------------------------------------------------------#
+# On autorise les requêtes http sur les port 9200, 9201 et 9202 #
+# mais on redirige tout vers NGinx sur le port 8080             #
+#################################################################
 
 # 1/ creer les règles
 iptables -A INPUT -i eth0 -p tcp --dport 9200 -j ACCEPT
@@ -38,3 +27,18 @@ iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 9202 -j REDIRECT --to-port 
 
 # 2/ Sauvegarder les règles
 iptables-save > /etc/iptables/rules.v4
+
+
+###################
+#  Config Nginx  ##
+###################
+
+# 1/ creer le mot de passe
+htpasswd -cb /etc/nginx/htpasswd_file elasticsearch_admin $PASSWORD
+chown root:nogroup /etc/nginx/htpasswd_file
+chmod 640 /etc/nginx/htpasswd_file
+
+# 2/ Copier le fichier nginx.conf
+cp configs/nginx.conf /etc/nginx/nginx.conf
+
+
