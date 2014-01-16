@@ -13,7 +13,7 @@ apt-get -y install vim
 #################################################################
 # INSTALLATION DE Nginx                                         #
 #---------------------------------------------------------------#
-apt-get install nginx-common apache2-utils iptables-persistent
+apt-get -y install nginx apache2-utils iptables-persistent
 
 #################################################################
 # INSTALLATION DE JAVA 1.7u25                                   #
