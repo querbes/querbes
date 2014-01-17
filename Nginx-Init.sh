@@ -29,9 +29,12 @@ iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 9202 -j REDIRECT --to-port 
 iptables-save > /etc/iptables/rules.v4
 
 
-###################
-#  Config Nginx  ##
-###################
+#################################################################
+#  Config Nginx                                                 #
+#---------------------------------------------------------------#
+# On autorise les requetes GET et HEAD sur le HTTP 8080         #
+# mais on demande un mot de passe pour les POST, PUT et DELETE  #
+#################################################################
 
 # 1/ creer le mot de passe
 htpasswd -cb /etc/nginx/htpasswd_file elasticsearch_admin $PASSWORD
@@ -40,5 +43,8 @@ chmod 640 /etc/nginx/htpasswd_file
 
 # 2/ Copier le fichier nginx.conf
 cp configs/nginx.conf /etc/nginx/nginx.conf
+
+# 3/ Démarrage automatique au boot
+sudo /usr/sbin/update-rc.d -f nginx defaults
 
 
