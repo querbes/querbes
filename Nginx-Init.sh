@@ -47,4 +47,6 @@ cp configs/nginx.conf /etc/nginx/nginx.conf
 # 3/ Démarrage automatique au boot
 sudo /usr/sbin/update-rc.d -f nginx defaults
 
+# 4/ Démarrage du service nginx
+sudo service nginx start
 
