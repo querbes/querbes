@@ -14,6 +14,8 @@ discovery.zen.fd.ping_interval: 15s
 discovery.zen.fd.ping_timeout: 60s
 discovery.zen.fd.ping_retries: 5
 
+indices.fielddata.cache.size: 50%
+
 ##################### ElasticSearch Configuration Example #####################
 
 # This file contains an overview of various configuration settings,
