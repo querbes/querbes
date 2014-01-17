@@ -13,12 +13,12 @@ then
         echo "       SiteName: DataCenter Name (ex: 'Querbes')"
         echo "       HeapSize_A: Node A HeapSize memory (ex: '30g')"
         echo "       HeapSize_B: Node B HeapSize memory (ex: '30g')"
-        echo "       HeapSize_M: Node M HeapSize memory (ex: '512m')"               
+        echo "       HeapSize_M: Node M HeapSize memory (ex: '1g')"
         echo ""
     else
         echo ""
         echo "Invalid number of parameters [ --help for details ]"
-        echo "Usage: ES-RemoteDeploy.sh root 192.168.1.1  'MyPa$sw0rd' 'Collogix' '30g' '30g' '512m'"
+        echo "Usage: ES-RemoteDeploy.sh root 192.168.1.1  'MyPa$sw0rd' 'Collogix' '30g' '30g' '1g'"
         echo ""
     fi
 else
