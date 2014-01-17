@@ -5,12 +5,12 @@ then
     if( [ $# -eq 1 ]  && [ $1 = '--help' ] )
     then
         echo ""
-        echo "Usage: ES-RemoteDeploy.sh root 192.168.1.1 'Collogix' '30g' '30g' '512m'"
-        echo "Usage: ES-RemoteDeploy.sh [user] [IP] [SiteName] [HeapSize_A] [HeapSize_B] [HeapSize_M]"
+        echo "Usage: ES-RemoteDeploy.sh root 192.168.1.1 'MyPa$sw0rd' 'Collogix' '30g' '30g' '512m'"
+        echo "Usage: ES-RemoteDeploy.sh [user] [IP] [NginxPassword] [SiteName] [HeapSize_A] [HeapSize_B] [HeapSize_M]"
         echo "       User: Remote User Login (ex: root)"
         echo "       IP: Remote IP Address (ex: 192.168.1.1)"
         echo "       NGinx Password: Password for the nginx proxy (ex: 'MyPa$sw0rd')" 
-        echo "       SiteName: DataCenter Name (ex: 'Querbes')"
+        echo "       SiteName: DataCenter Name (ex: 'Collogix' or 'Querbes')"
         echo "       HeapSize_A: Node A HeapSize memory (ex: '30g')"
         echo "       HeapSize_B: Node B HeapSize memory (ex: '30g')"
         echo "       HeapSize_M: Node M HeapSize memory (ex: '1g')"
