@@ -7,14 +7,14 @@ node.machine: "{HOSTNAME}"
 cluster.routing.allocation.awareness.attributes: site,machine
 transport.tcp.port: 9300
 http.port: 9200
-
+discovery.zen.minimum_master_nodes: 3
 discovery.zen.ping.multicast.enabled: false
 discovery.zen.ping.unicast.hosts: ["{IP_ADDRESS}:9300"]
 discovery.zen.fd.ping_interval: 15s
 discovery.zen.fd.ping_timeout: 60s
 discovery.zen.fd.ping_retries: 5
-
 indices.fielddata.cache.size: 50%
+bootstrap.mlockall: true
 
 ##################### ElasticSearch Configuration Example #####################
 

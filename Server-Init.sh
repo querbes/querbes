@@ -10,8 +10,7 @@ apt-get update
 #################################################################
 # INSTALLATION D'UTILITAIRES                                    #
 #---------------------------------------------------------------#
-apt-get install sudo unzip java-common
-apt-get -y install vim
+apt-get -y install sudo unzip java-common vim
 
 #################################################################
 # INSTALLATION DE Nginx                                         #

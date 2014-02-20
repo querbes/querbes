@@ -17,13 +17,13 @@ ES_HEAP_SIZE={CEDROM-HEAP_SIZE}
 # Maximum locked memory size. Set to "unlimited" if you use the
 # bootstrap.mlockall option in elasticsearch.yml. You must also set
 # ES_HEAP_SIZE.
-#MAX_LOCKED_MEMORY=unlimited
+MAX_LOCKED_MEMORY=unlimited
 
 # ElasticSearch log directory
 LOG_DIR=/var/log/elasticsearch_m
 
 # ElasticSearch data directory
-DATA_DIR=/var/lib/elasticsearch_m
+DATA_DIR=/var/data/elasticsearch_m
 
 # ElasticSearch work directory
 WORK_DIR=/tmp/elasticsearch_m
