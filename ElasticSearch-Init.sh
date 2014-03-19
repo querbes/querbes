@@ -60,10 +60,10 @@ mkdir /usr/share/elasticsearch_a
 mkdir /usr/share/elasticsearch_b
 
 # 6/ Copie du code source d'ElasticSearch
-tar -zxvf source/elasticsearch-0.90.10.tar.gz
-cp -R elasticsearch-0.90.10/* /usr/share/elasticsearch_m/
-cp -R elasticsearch-0.90.10/* /usr/share/elasticsearch_a/
-cp -R elasticsearch-0.90.10/* /usr/share/elasticsearch_b/
+tar -zxvf source/elasticsearch-1.0.1.tar.gz
+cp -R elasticsearch-1.0.1/* /usr/share/elasticsearch_m/
+cp -R elasticsearch-1.0.1/* /usr/share/elasticsearch_a/
+cp -R elasticsearch-1.0.1/* /usr/share/elasticsearch_b/
 
 # 7/ Copie des scripts de démarrage
 cp scripts/initd/elasticsearch_* /etc/init.d/
