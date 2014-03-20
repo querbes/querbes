@@ -7,7 +7,7 @@ mkdir /cedromsni
 cd /cedromsni
 
 echo "# DOWNLOAD SUR GITHUB DU SCRIPT D'INSTALLATION #"
-wget https://github.com/querbes/querbes/archive/master.tar.gz
+wget https://github.com/querbes/querbes/archive/master.tar.gz --no-check-certificate
 tar -zxvf master.tar.gz
 mv querbes-master/ install/
 cd install

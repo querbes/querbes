@@ -21,5 +21,5 @@ then
         echo ""
     fi
 else
-    ssh -t -o StrictHostKeyChecking=no -l $1 $2 "wget https://github.com/querbes/querbes/raw/master/START-INSTALL.sh;chmod +x START-INSTALL.sh;./START-INSTALL.sh  $3 $4 $5 $6 $7"
+    ssh -t -o StrictHostKeyChecking=no -l $1 $2 "wget https://github.com/querbes/querbes/raw/master/START-INSTALL.sh --no-check-certificate;chmod +x START-INSTALL.sh;./START-INSTALL.sh  $3 $4 $5 $6 $7"
 fi

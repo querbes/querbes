@@ -1,4 +1,4 @@
-#!/bin/sh
+ #!/bin/sh
 
 if ([ $# -ne 7 ] )
 then 
@@ -22,6 +22,6 @@ then
         echo ""
     fi
 else
-    ssh -t -o StrictHostKeyChecking=no -l $1 $2 "wget https://github.com/querbes/querbes/raw/master/ES-LocalDeploy.sh;chmod +x ES-LocalDeploy.sh;./ES-LocalDeploy.sh $3 $4 $5 $6 $7"
+    ssh -t -o StrictHostKeyChecking=no -l $1 $2 "wget https://github.com/querbes/querbes/raw/master/ES-LocalDeploy.sh --no-check-certificate;chmod +x ES-LocalDeploy.sh;./ES-LocalDeploy.sh $3 $4 $5 $6 $7"
 fi
 
